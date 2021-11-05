@@ -1,4 +1,4 @@
-package com.example.officefinder.ui.notifications
+package com.example.officefinder.ui.explore
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,13 +8,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.officefinder.R
-import com.example.officefinder.databinding.FragmentNotificationsBinding
+import com.example.officefinder.databinding.FragmentExploreBinding
 
-class NotificationsFragment : Fragment() {
+class ExploreFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: NotificationsViewModel
-    private var _binding: FragmentNotificationsBinding? = null
+    private lateinit var exploreViewModel: ExploreViewModel
+    private var _binding: FragmentExploreBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,14 +24,14 @@ class NotificationsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+        exploreViewModel =
+            ViewModelProvider(this).get(ExploreViewModel::class.java)
 
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        _binding = FragmentExploreBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
+        val textView: TextView = binding.textExplore
+        exploreViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

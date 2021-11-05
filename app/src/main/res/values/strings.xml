@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">OfficeFinder</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_explore">Utforsk</string>
+    <string name="title_favorite">Favoritter</string>
+    <string name="title_status">Status</string>
+    <string name="title_profile">Meg</string>
 </resources>
