@@ -37,11 +37,6 @@ class ExploreFragment : Fragment() {
         _binding = FragmentExploreBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textExplore
-        exploreViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-
         return root
     }
 

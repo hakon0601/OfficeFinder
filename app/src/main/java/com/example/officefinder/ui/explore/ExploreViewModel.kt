@@ -34,9 +34,9 @@ class ExploreViewModel : ViewModel() {
         })
     }
 
-
     private val _text = MutableLiveData<String>().apply {
-        value = "This is explore Fragment"
+        value = "This is favorite Fragment"
     }
     val text: LiveData<String> = _text
+
 }
